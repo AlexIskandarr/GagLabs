@@ -2,7 +2,7 @@
 
 int main() {
     double* array = nullptr;
-    int32_t size = 0;
+    int32_t size {};
     std::string filename;
     char sourceChoice, outputChoice;
 
@@ -76,6 +76,23 @@ int main() {
         return 1;
     }
 
+    int32_t qntStudent{};
+	std::cout << "input quantity of students: \n";
+	std::cin >> qntStudent;
+
+	Student* students = new Student[qntStudent];
+	InputInfoStudents(students, qntStudent);
+
+	double* averageMarks = new double[qntStudent];
+	for (size_t i = 0; i < qntStudent; ++i) {
+		averageMarks[i] = AverageMark(students[i]);
+	}
+
+	BubleSortForStudents(students, averageMarks, qntStudent);
+	PrintStudents(students, qntStudent, averageMarks);
+
+	delete[] students;
+	delete[] averageMarks;
 
     return 0;
 }
