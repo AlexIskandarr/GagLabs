@@ -1,0 +1,7 @@
+4 1 frunzin 4 2 1
+4 3 gavrikov 2 5 3
+2 1 shpilevski 5 8 2
+3 2 markarian 3 2 5
+1 2 sidorovich 2 2 3
+4 3 shulman 8 8 8
+2 2 borbotiko 9 3 6
